@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h1>My Gallery HomePage Was Built By {{ developer }}</h1>
         <img :src="image" alt="image" />
         <br>

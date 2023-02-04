@@ -1,0 +1,17 @@
+body {
+    background-color: #333;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container img {
+    width: 200px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
