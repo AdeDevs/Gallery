@@ -1,9 +1,13 @@
 <template>
     <div class="container">
-        <h1>My Gallery HomePage Was Built By {{ developer }}</h1>
         <img :src="image" alt="image" />
+        <p>{{ museFirst }} {{ museLast }}</p>
         <br>
+        <button @click="shuffleNextImage()">Prev</button>
         <button @click="shuffleNextImage()">Next</button>
+        <footer>
+            <h1>This Gallery Was Built By <a href="#">{{ developer }}</a></h1>
+        </footer>
     </div>
 </template>
 
@@ -12,8 +16,10 @@ export default {
     name: "HomePage",
         data() {
             return {
-                developer: "Adeyemi",
+                developer: "AdeDevs",
                 image: "https://randomuser.me/api/portraits/men/19.jpg",
+                museFirst: "Jon",
+                museLast: "Doe"
             }
         },
         methods: {
@@ -21,8 +27,9 @@ export default {
                 const res = await fetch("https://randomuser.me/api/");
                 const { results } = await res.json();
                 
-                this.developer = 'Reece James';
-                this.image = results[0].picture.large
+                this.museFirst = results[0].name.first;
+                this.museLast = results[0].name.last;
+                this.image = results[0].picture.large;
             }
         }
     }
