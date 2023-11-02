@@ -19,7 +19,7 @@ export default {
     name: "HomePage",
         data() {
             return {
-                developer: "AdeDevs",
+                developer: "AdeDevs" ,
                 image: "https://randomuser.me/api/portraits/men/19.jpg",
                 museFirst: "Jon",
                 museLast: "Doe"
